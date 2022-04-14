@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-    <img src="https://t3.ftcdn.net/jpg/01/37/37/10/240_F_137371088_fgyexgp5eh97Ds4BVgVxZULaFgbLBIjh.jpg" alt="Logo" width="120">
+    <img src="https://images.assetsdelivery.com/compings_v2/meon04/meon041812/meon04181200002.jpg" alt="Logo" width="120">
 
   <h3 align="center">Projet Comeleon</h3>
 
