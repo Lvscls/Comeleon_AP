@@ -145,7 +145,7 @@ Une fois la base créée, nous allons importer les tables
 Pour en finir avec la base de données, nous allons importer les jeux d'essais réalisés
 
 ```sh
-   symfony console doctrinefixture:load
+   symfony console doctrine:fixture:load
 ```
 
 
