@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formAvis 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+<div class="container mt-4">
+
+		{% if editMode %}
+			<h1>Modification d'un avis</h1>
+		{% else %}
+			<h1>Création d'un avis</h1>
+		{% endif %}
+		
+
+		{{ form_start(formAvis) }}
+
+		{{ form_row(formAvis.nom) }}
+		{{ form_row(formAvis.prenom) }}
+		{{ form_row(formAvis.contenu) }}
+
+		<button type="submit" class="btn btn-primary mt-4">
+
+			{% if editMode %}
+				Modifier l'avis
+			{% else %}
+				Ajouter l'avis
+			{% endif %}
+
+		</button>
+		{{ form_end(formAvis) }}
+	</div>
+	{% endblock %}

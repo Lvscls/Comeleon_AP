@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prestations {% endblock %}
+
+{% block body %}
+	<div class="container mt-5 text-center">
+		{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+			<a href="/prestation/new" class="btn mb-4 px-4 btn-outline-primary">Ajouter une Prestation</a>
+		{% endif %}
+		<div class="row">
+			{% for prestation in prestations %}
+				<div class="col-6">
+					<div class="card  text-center mb-4">
+						<div class="iconbox iconbox__style-02 mt-4">
+							<img src="{{ prestation.image }}" class="img-fluid" width="590">
+							<div>
+								<div class="card-body">
+									<h5 class="card-title">{{ prestation.libelle }}</h5>
+									<p class="card-text">{{ prestation.description | raw }}</p>
+									<p class="card-text">a partir de
+										<strong>{{ prestation.prix }}€</strong>
+									</p>
+									{% if is_granted('IS_AUTHENTICATED_FULLY') %}
+										<a href="/prestation/{{ prestation.id }}/edit" class="btn btn-outline-primary">Modifier</a>
+										<a href="/prestation/{{ prestation.id }}/delete" onclick="return confirm('Voulez vous vraiment supprimer la prestation ?')" class="btn btn-outline-danger">Supprimer</a>
+									{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

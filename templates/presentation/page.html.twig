@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formPresentation 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+<div class="example-wrapper">
+    <h1> Changement du texte </h1>
+
+        {{ form_start(formPresentation) }}
+        
+        {{ form_row(formPresentation.titre) }}
+        {{ form_row(formPresentation.contenu) }}
+        {{ form_row(formPresentation.image) }}
+        
+        
+        </br>
+        <center><button type="submit" class="btn btn-primary"> Enregistrer </button></center>
+        {{ form_end(formPresentation) }}
+</div>
+    
+{% endblock %}

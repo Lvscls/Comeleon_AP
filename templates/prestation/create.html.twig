@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formPrestation 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+<div class="container mt-4">
+
+		{% if editMode %}
+			<h1>Modification d'une prestation</h1>
+		{% else %}
+			<h1>Création d'une prestation</h1>
+		{% endif %}
+		
+
+		{{ form_start(formPrestation) }}
+
+		{{ form_row(formPrestation.libelle) }}
+		{{ form_row(formPrestation.prix) }}
+		{{ form_row(formPrestation.description) }}
+		{{ form_row(formPrestation.image) }}
+
+		<button type="submit" class="btn btn-primary mt-4">
+
+			{% if editMode %}
+				Modifier la prestation
+			{% else %}
+				Ajouter la prestation
+			{% endif %}
+
+		</button>
+		{{ form_end(formPrestation) }}
+	</div>
+	{% endblock %}

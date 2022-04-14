@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+   <section id="header" class="jumbotron text-center">
+     <h1 class="display-3">Beautybae</h1>
+     <p class="lead">Institut de beauté</p>
+</section>
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="assets/images/soin1.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Présentation</h5>
+        <p class="card-text">Esthéticienne à Vernon Beautybae, vous propose des soins à domicile et au salon près de Saint-Marcel. Riche de 20 années d’expérience, votre esthéticienne de Beautybae vous propose des soins de beauté et des épilations dans l'institut ou à domicile à Vernon dans l'Eure (27).</p>
+       <a href="/presentation" class="btn btn-outline-success btn-sm">En savoir plus</a>
+      </div>
+     </div>
+    </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="assets/images/soin2.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Prestations</h5>
+        <p class="card-text">Nous proposons des prestation pour femme et homme. De l'épilation aux soins du corps ou du visage. Notre large choix de prestation vous assure de trouver ce qu'il faut.</p>
+       <a href="/prestation" class="btn btn-outline-success btn-sm">Voir les prestations</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="assets/images/soin3.jpg" alt="" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Votre avis compte</h5>
+        <p class="card-text">Afin de vous proposer le meilleur service possible. Nous prenons en compte vos avis et vos commentaires.</p>
+       <a href="/avis" class="btn btn-outline-success btn-sm">Laisser un avis</a>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}
